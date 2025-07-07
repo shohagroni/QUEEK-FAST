@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Admin Panel - Queek Fast</title>
-</head>
-<body>
-  <h2>Admin Login</h2>
-  <input type="email" id="email" placeholder="Email">
-  <input type="password" id="password" placeholder="Password">
-  <button onclick="login()">Login</button>
-
-  <div id="order-data" style="display:none;">
-    <h3>Order Data</h3>
-    <iframe src="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID_HERE/edit?usp=sharing" width="100%" height="500"></iframe>
-  </div>
-
-  <script>
-    function login() {
-      const email = document.getElementById('email').value;
-      const pass = document.getElementById('password').value;
-      if (email === "shohagroni.info@gmail.com" && pass === "Shohagroni46@#") {
-        document.getElementById("order-data").style.display = "block";
-      } else {
-        alert("ভুল ইমেইল বা পাসওয়ার্ড");
-      }
-    }
-  </script>
-</body>
-</html>
+function doPost(e){
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var data = JSON.stringify(e.parameter);
+  var values = JSON.parse(data);
+  sheet.appendRow([values.name, values.product, values.phone, values.address, new Date()]);
+  return ContentService.createTextOutput("Success");
+}
