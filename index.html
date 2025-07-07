@@ -7,43 +7,50 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Queek Fast</h1>
-    <p>অনলাইন পণ্য অর্ডার করুন সহজেই!</p>
-  </header>
 
-  <section>
-    <form id="order-form">
-      <input type="text" name="name" placeholder="আপনার নাম" required>
-      <input type="text" name="product" placeholder="পণ্যের নাম" required>
-      <input type="tel" name="phone" placeholder="মোবাইল নম্বর" required>
-      <input type="text" name="address" placeholder="ঠিকানা" required>
-      <button type="submit">অর্ডার করুন</button>
-    </form>
+  <!-- Menu Bar -->
+  <nav class="navbar">
+    <div class="logo">Queek Fast</div>
+    <ul class="menu">
+      <li><a href="#">হোম</a></li>
+      <li><a href="#">পণ্যসমূহ</a></li>
+      <li><a href="#">যোগাযোগ</a></li>
+      <li><a href="admin.html">এডমিন</a></li>
+    </ul>
+  </nav>
+
+  <!-- Product Section -->
+  <section class="products">
+    <h2>আমাদের পণ্যসমূহ</h2>
+    <div class="product-grid">
+      <!-- 15 cards -->
+      <!-- Card Template -->
+      <!-- Repeat below block 15 times -->
+      <!-- START CARDS -->
+      <!-- For Loop would be better in real code -->
+      <!-- Here's sample 3, you can copy/paste more -->
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 1">
+        <h3>পণ্য ১</h3>
+        <p>৳১০০</p>
+        <button>অর্ডার করুন</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 2">
+        <h3>পণ্য ২</h3>
+        <p>৳১৫০</p>
+        <button>অর্ডার করুন</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 3">
+        <h3>পণ্য ৩</h3>
+        <p>৳২০০</p>
+        <button>অর্ডার করুন</button>
+      </div>
+      <!-- Copy the above <div class="card">...</div> block 12 more times -->
+      <!-- END CARDS -->
+    </div>
   </section>
 
-  <footer>
-    <p>যোগাযোগ: shohagroni.info@gmail.com | ০১৩০৯৭৩২৪৫৫</p>
-  </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-    const scriptURL = 'https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_URL/exec';
-    $('#order-form').on('submit', function(e) {
-      e.preventDefault();
-      $.ajax({
-        url: scriptURL,
-        method: 'POST',
-        data: $(this).serialize(),
-        success: function() {
-          alert('অর্ডার সফলভাবে জমা হয়েছে!');
-          $('#order-form')[0].reset();
-        },
-        error: function() {
-          alert('কিছু সমস্যা হয়েছে, আবার চেষ্টা করুন।');
-        }
-      });
-    });
-  </script>
 </body>
 </html>
