@@ -1,59 +1,49 @@
 
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Queek Fast</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="sidebar">
-    <h2>☰ মেনু</h2>
-    <ul>
-      <li><a href="#">🏠 হোম</a></li>
-      <li><a href="#products">🛒 প্রোডাক্ট</a></li>
-      <li><a href="#checkout">📦 অর্ডার</a></li>
-      <li><a href="admin.html">🔐 অ্যাডমিন</a></li>
-    </ul>
-  </div>
+  <header>
+    <h1>Queek Fast</h1>
+    <p>অনলাইন পণ্য অর্ডার করুন সহজেই!</p>
+  </header>
 
-  <div class="content">
-    <h1>Queek Fast পণ্যসমূহ</h1>
-    <div id="products" class="products-grid">
-      <!-- ১৫টি প্রোডাক্ট কার্ড -->
-      <div class="product-card">
-        <img src="images/product1.jpg" alt="Product 1" />
-        <h3>পণ্য ১</h3>
-        <p>৳ ১০০</p>
-        <button class="order-btn">অর্ডার করুন</button>
-      </div>
-      <div class="product-card">
-        <img src="images/product2.jpg" alt="Product 2" />
-        <h3>পণ্য ২</h3>
-        <p>৳ ২০০</p>
-        <button class="order-btn">অর্ডার করুন</button>
-      </div>
-      <div class="product-card">
-        <img src="images/product3.jpg" alt="Product 3" />
-        <h3>পণ্য ৩</h3>
-        <p>৳ ৩০০</p>
-        <button class="order-btn">অর্ডার করুন</button>
-      </div>
-      <!-- তোমার মত আরও ১২টা প্রোডাক্ট কার্ড যুক্ত করো এখানে -->
-    </div>
+  <section>
+    <form id="order-form">
+      <input type="text" name="name" placeholder="আপনার নাম" required>
+      <input type="text" name="product" placeholder="পণ্যের নাম" required>
+      <input type="tel" name="phone" placeholder="মোবাইল নম্বর" required>
+      <input type="text" name="address" placeholder="ঠিকানা" required>
+      <button type="submit">অর্ডার করুন</button>
+    </form>
+  </section>
 
-    <div id="checkout">
-      <h2>Checkout</h2>
-      <form id="checkout-form">
-        <input type="text" name="name" placeholder="আপনার নাম" required />
-        <input type="tel" name="phone" placeholder="ফোন নম্বর" required />
-        <input type="text" name="address" placeholder="ঠিকানা" required />
-        <button type="submit">Pay Now</button>
-      </form>
-    </div>
-  </div>
+  <footer>
+    <p>যোগাযোগ: shohagroni.info@gmail.com | ০১৩০৯৭৩২৪৫৫</p>
+  </footer>
 
-  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_URL/exec';
+    $('#order-form').on('submit', function(e) {
+      e.preventDefault();
+      $.ajax({
+        url: scriptURL,
+        method: 'POST',
+        data: $(this).serialize(),
+        success: function() {
+          alert('অর্ডার সফলভাবে জমা হয়েছে!');
+          $('#order-form')[0].reset();
+        },
+        error: function() {
+          alert('কিছু সমস্যা হয়েছে, আবার চেষ্টা করুন।');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
