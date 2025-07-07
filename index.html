@@ -3,152 +3,32 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <title>QUEEK FAST - অনলাইন পণ্য</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f2f5;
-    }
-    header {
-      background-color: #0984e3;
-      padding: 20px;
-      text-align: center;
-      color: white;
-    }
-    h1 {
-      margin: 0;
-    }
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 30px;
-    }
-    .product {
-      background-color: white;
-      width: 220px;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .product img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    .product h3 {
-      margin: 10px 0 5px;
-    }
-    .product p {
-      margin: 5px 0;
-    }
-    .product button {
-      background-color: #00b894;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-    footer {
-      text-align: center;
-      background-color: #dfe6e9;
-      padding: 15px;
-      margin-top: 40px;
-    }
-    .order-form, .payment-section {
-      max-width: 500px;
-      background: white;
-      margin: 30px auto;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .order-form input, .order-form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      margin-bottom: 15px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    .order-form button {
-      background-color: #0984e3;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .payment-section h3 {
-      margin-bottom: 10px;
-    }
-    .payment-section p {
-      margin: 5px 0;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUEEK FAST</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header>
     <h1>QUEEK FAST</h1>
     <p>বাংলাদেশের সেরা অনলাইন পণ্য বাজার</p>
   </header>
-
   <section class="products">
-    <div class="product">
-      <img src="https://via.placeholder.com/200x150" alt="পণ্য ১">
-      <h3>T-Shirt</h3>
-      <p>৳ ৫০০</p>
-      <button onclick="scrollToOrderForm()">অর্ডার করুন</button>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/200x150" alt="পণ্য ২">
-      <h3>Light</h3>
-      <p>৳ ৭৫০</p>
-      <button onclick="scrollToOrderForm()">অর্ডার করুন</button>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/200x150" alt="পণ্য ৩">
-      <h3>Pant</h3>
-      <p>৳ ১২০০</p>
-      <button onclick="scrollToOrderForm()">অর্ডার করুন</button>
-    </div>
+    <div class="product-card">T-Shirt - ৫০০৳ <button>অর্ডার করুন</button></div>
+    <div class="product-card">Light - ৫৫০৳ <button>অর্ডার করুন</button></div>
+    <div class="product-card">Pant - ১৩০০৳ <button>অর্ডার করুন</button></div>
   </section>
-
-  <section class="order-form" id="orderForm">
+  <section class="form">
     <h2>অর্ডার ফর্ম</h2>
     <form>
-      <input type="text" placeholder="আপনার নাম" required>
-      <input type="tel" placeholder="মোবাইল নাম্বার" required>
-      <input type="text" placeholder="ঠিকানা" required>
-      <textarea placeholder="যে পণ্যটি নিতে চান..." rows="3" required></textarea>
+      <input type="text" placeholder="আপনার নাম">
+      <input type="text" placeholder="মোবাইল নাম্বার">
+      <input type="text" placeholder="ঠিকানা">
+      <textarea placeholder="যে পণ্যটি নিতে চান..."></textarea>
       <button type="submit">অর্ডার সাবমিট করুন</button>
     </form>
   </section>
-
-  <section class="payment-section">
-    <h2>পেমেন্ট তথ্য</h2>
-    <h3>Bkash / Nagad</h3>
-    <p>📱 নম্বর: <strong>01644833446</strong></p>
-    <p>➡️ Send Money করে Transaction ID নিচে দিন</p>
-    <input type="text" placeholder="Transaction ID" style="width: 100%; padding: 10px; margin-top: 10px;">
-  </section>
-
   <footer>
-    &copy; ২০২৫ QUEEK FAST | সর্বস্বত্ব সংরক্ষিত
+    <p>© ২০২৫ QUEEK FAST | সর্বস্বত্ব সংরক্ষিত</p>
   </footer>
-
-  <script>
-    function scrollToOrderForm() {
-      document.getElementById('orderForm').scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
-
 </body>
 </html>
