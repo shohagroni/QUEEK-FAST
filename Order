@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Order Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+    }
+    .order-container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #007bff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 25px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 15px;
+      width: 100%;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<div class="order-container">
+  <h2>Order করুন</h2>
+  <form id="orderForm">
+    <label for="name">নাম</label>
+    <input type="text" id="name" name="name" placeholder="আপনার নাম লিখুন" required />
+
+    <label for="phone">মোবাইল নাম্বার</label>
+    <input type="tel" id="phone" name="phone" placeholder="০১XXXXXXXXX" required />
+
+    <label for="product">পণ্য নির্বাচন করুন</label>
+    <select id="product" name="product" required>
+      <option value="">-- পণ্য নির্বাচন করুন --</option>
+      <option value="product1">পণ্য ১</option>
+      <option value="product2">পণ্য ২</option>
+      <option value="product3">পণ্য ৩</option>
+    </select>
+
+    <button type="submit">পেমেন্টে যান</button>
+  </form>
+</div>
+
+<script>
+  const orderForm = document.getElementById('orderForm');
+  orderForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('পেমেন্ট ইন্টিগ্রেশন পরে যোগ করবে। আপাতত ফর্ম সাবমিশন ব্লক করা হয়েছে।');
+    // এখানে তুমি SSLCommerz বা অন্য পেমেন্ট গেটওয়ে ইন্টিগ্রেশন করবে।
+  });
+</script>
+
+</body>
+</html>
