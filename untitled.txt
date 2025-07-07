@@ -1,0 +1,6 @@
+document.getElementById('checkout-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Redirecting to SSLCommerz Payment Gateway (Sandbox)...');
+  // এখানে তোমার SSLCommerz পেমেন্ট গেটওয়ের URL দিবে
+  window.location.href = 'https://sandbox.sslcommerz.com/EasyCheckOut/testcd.php';
+});
