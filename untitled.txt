@@ -1,6 +1,29 @@
-document.getElementById('checkout-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Redirecting to SSLCommerz Payment Gateway (Sandbox)...');
-  // এখানে তোমার SSLCommerz পেমেন্ট গেটওয়ের URL দিবে
-  window.location.href = 'https://sandbox.sslcommerz.com/EasyCheckOut/testcd.php';
-});
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel - Queek Fast</title>
+</head>
+<body>
+  <h2>Admin Login</h2>
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+
+  <div id="order-data" style="display:none;">
+    <h3>Order Data</h3>
+    <iframe src="https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID_HERE/edit?usp=sharing" width="100%" height="500"></iframe>
+  </div>
+
+  <script>
+    function login() {
+      const email = document.getElementById('email').value;
+      const pass = document.getElementById('password').value;
+      if (email === "shohagroni.info@gmail.com" && pass === "Shohagroni46@#") {
+        document.getElementById("order-data").style.display = "block";
+      } else {
+        alert("ভুল ইমেইল বা পাসওয়ার্ড");
+      }
+    }
+  </script>
+</body>
+</html>
