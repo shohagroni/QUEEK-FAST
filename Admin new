@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QUEEK FAST</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+    }
+    nav {
+      background-color: #007bff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0; padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #007bff;
+    }
+    button.order-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background-color 0.3s ease;
+    }
+    button.order-btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo" style="color: white; font-weight: bold; font-size: 22px;">QUEEK FAST</div>
+  <ul>
+    <li><a href="index.html">হোম</a></li>
+    <li><a href="admin-login.html">Admin</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <h1>স্বাগতম QUEEK FAST এ!</h1>
+  <p>আমাদের অনলাইন পণ্য বিক্রির ওয়েবসাইটে আপনাকে স্বাগতম।</p>
+
+  <button class="order-btn" onclick="location.href='order.html'">Order করুন</button>
+</div>
+
+</body>
+</html>
