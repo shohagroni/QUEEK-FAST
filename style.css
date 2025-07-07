@@ -1,36 +1,78 @@
 
+/* Reset + Base */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
   margin: 0;
-  padding: 0;
-  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
 }
-header {
+
+/* Navbar */
+.navbar {
   background-color: #008CBA;
   color: white;
-  padding: 20px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-form {
-  margin: 30px auto;
-  width: 90%;
-  max-width: 400px;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
-input, button {
-  display: block;
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.menu li {
+  margin-left: 20px;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Product Section */
+.products {
+  padding: 40px 20px;
+  text-align: center;
+}
+.products h2 {
+  margin-bottom: 20px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.card img {
   width: 100%;
-  padding: 12px;
-  margin: 10px 0;
+  border-radius: 8px;
+}
+.card h3 {
+  margin: 10px 0 5px;
+}
+.card p {
+  color: green;
+}
+.card button {
+  padding: 10px 15px;
+  background: #28a745;
+  color: white;
   border: none;
   border-radius: 6px;
+  cursor: pointer;
 }
-button {
-  background-color: #28a745;
-  color: white;
-  font-size: 16px;
-}
-footer {
-  background-color: #333;
-  color: white;
-  padding: 15px;
+.card button:hover {
+  background: #218838;
 }
