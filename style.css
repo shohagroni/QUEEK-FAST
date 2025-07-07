@@ -5,5 +5,5 @@ header { background: #007bff; color: white; text-align: center; padding: 20px; }
 .product-card { background: white; padding: 10px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
 .form { background: #fff; padding: 20px; margin: 20px; border-radius: 8px; }
 input, textarea { display: block; width: 100%; margin: 10px 0; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
-button { padding: 10px 15px; background: #007bff; color: white; border: none; border-radius: 5px; }
+button { padding: 10px 15px; background: black; color: white; border: none; border-radius: 5px; }
 footer { text-align: center; padding: 10px; background: #ddd; }
