@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Queek Fast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Menu Bar -->
+  <nav class="navbar">
+    <div class="logo">Queek Fast</div>
+    <ul class="menu">
+      <li><a href="#">হোম</a></li>
+      <li><a href="#">পণ্যসমূহ</a></li>
+      <li><a href="#">যোগাযোগ</a></li>
+      <li><a href="admin.html">এডমিন</a></li>
+    </ul>
+  </nav>
+
+  <!-- Product Section -->
+  <section class="products">
+    <h2>আমাদের পণ্যসমূহ</h2>
+    <div class="product-grid">
+
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 1">
+        <h3>পণ্য 1</h3>
+        <p>৳50</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 2">
+        <h3>পণ্য 2</h3>
+        <p>৳100</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 3">
+        <h3>পণ্য 3</h3>
+        <p>৳150</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 4">
+        <h3>পণ্য 4</h3>
+        <p>৳200</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 5">
+        <h3>পণ্য 5</h3>
+        <p>৳250</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 6">
+        <h3>পণ্য 6</h3>
+        <p>৳300</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 7">
+        <h3>পণ্য 7</h3>
+        <p>৳350</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 8">
+        <h3>পণ্য 8</h3>
+        <p>৳400</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 9">
+        <h3>পণ্য 9</h3>
+        <p>৳450</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 10">
+        <h3>পণ্য 10</h3>
+        <p>৳500</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 11">
+        <h3>পণ্য 11</h3>
+        <p>৳550</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 12">
+        <h3>পণ্য 12</h3>
+        <p>৳600</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 13">
+        <h3>পণ্য 13</h3>
+        <p>৳650</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 14">
+        <h3>পণ্য 14</h3>
+        <p>৳700</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+      <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Product 15">
+        <h3>পণ্য 15</h3>
+        <p>৳750</p>
+        <button>অর্ডার করুন</button>
+      </div>
+    
+    </div>
+  </section>
+  
+  <section class="order-form" id="orderForm">
+    <h2>অর্ডার ফর্ম</h2>
+    <form>
+      <input type="text" placeholder="আপনার নাম" required>
+      <input type="tel" placeholder="মোবাইল নাম্বার" required>
+      <input type="text" placeholder="ঠিকানা" required>
+      <textarea placeholder="যে পণ্যটি নিতে চান..." rows="3" required></textarea>
+      <button type="submit">অর্ডার সাবমিট করুন</button>
+    </form>
+  </section>
+
+  <section class="payment-section">
+    <h2>পেমেন্ট তথ্য</h2>
+    <h3>Bkash / Nagad</h3>
+    <p>📱 নম্বর: <strong>01XXXXXXXXX</strong></p>
+    <p>➡️ Send Money করে Transaction ID নিচে দিন</p>
+    <input type="text" placeholder="Transaction ID" style="width: 100%; padding: 10px; margin-top: 10px;">
+  </section>
+
+  <footer>
+    &copy; ২০২৫ QUEEK FAST | সর্বস্বত্ব সংরক্ষিত
+  </footer>
+
+  <script>
+    function scrollToOrderForm() {
+      document.getElementById('orderForm').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
